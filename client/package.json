@@ -1,0 +1,52 @@
+{
+  "name": "vue-laravel-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "rm -rf ../api/public/{app} && vue-cli-service build --no-clean",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.5.3",
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "qs": "^6.9.4",
+    "tailwindcss": "^1.9.1",
+    "vee-validate": "^4.0.0-beta.8",
+    "vue": "^3.0.0-0",
+    "vue-router": "^4.0.0-beta.13",
+    "vuex": "^4.0.0-beta.4",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.7",
+    "@vue/cli-plugin-eslint": "^4.5.7",
+    "@vue/cli-service": "^4.5.7",
+    "@vue/compiler-sfc": "^3.0.0-0",
+    "@vue/eslint-config-airbnb": "^5.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.1",
+    "postcss-import": "^12.0.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
