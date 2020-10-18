@@ -2,6 +2,12 @@
 
 Vue-laravel-starter is a basic boilerplate for building vue single-page applications with a headless laravel as the backend. The purpose of creating it is to provide a head start when starting a new idea.
 
+## Features
+
+- Authentication
+  - Email Verification
+  - Password reset
+
 ## Installation
 
 1. Clone repository
