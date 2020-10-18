@@ -4,10 +4,10 @@ Vue-laravel-starter is a basic boilerplate for building vue single-page applicat
 
 ## Installation
 
-Clone repository
-Create a database
-Install dependencies by running `npm install` within `client` folder and `composer install` within `api` folder.
-Setup `.env.development.local` inside `client` folder and `.env` inside `api` folder. There are `.example` files for both of these.
+1. Clone repository
+2. Create a database
+3. Install dependencies by running `npm install` within `client` folder and `composer install` within `api` folder.
+4. Setup `.env.development.local` inside `client` folder and `.env` inside `api` folder. There are `.example` files for both of these.
 
 ## Prepare webserver
 
