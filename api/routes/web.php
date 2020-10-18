@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])
-    ->middleware(['guest'])
-    ->name('login');
-
 Route::post('/register', [\App\Http\Controllers\AuthController::class, 'register'])
     ->middleware(['guest'])
     ->name('register');
@@ -27,6 +23,18 @@ Route::post('/email/verify/{id}/{hash}', \App\Http\Controllers\VerifyEmailContro
 
 Route::post('/email/verification-notification', \App\Http\Controllers\EmailVerificationNotificationController::class)
     ->name('verification.send');
+
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])
+    ->middleware(['guest'])
+    ->name('login');
+
+Route::post('/forgot-password', \App\Http\Controllers\PasswordResetLinkController::class)
+    ->middleware(['guest'])
+    ->name('password.email');
+
+Route::post('/reset-password', \App\Http\Controllers\NewPasswordController::class)
+    ->middleware(['guest'])
+    ->name('password.update');
 
 Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])
     ->middleware('auth:sanctum')

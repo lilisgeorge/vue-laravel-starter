@@ -54,6 +54,24 @@ const store = createStore({
         return Promise.reject(error);
       }
     },
+    async passwordResetLink(ctx, { formData }) {
+      try {
+        const response = await api.post('forgot-password', formData);
+
+        return Promise.resolve(response);
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    },
+    async passwordReset(ctx, { formData }) {
+      try {
+        const response = await api.post('reset-password', formData);
+
+        return Promise.resolve(response);
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    },
     async register(ctx, { formData }) {
       try {
         await ctx.dispatch({

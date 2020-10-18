@@ -19,6 +19,23 @@ const routes = [
     },
   },
   {
+    path: '/forgot-password',
+    name: 'password.request',
+    component: () => import(/* webpackChunkName: "forgotPassword" */ '../views/forgotPassword.vue'),
+    meta: {
+      requiresGuest: true,
+    },
+  },
+  {
+    path: '/reset-password/:token',
+    name: 'password.reset',
+    component: () => import(/* webpackChunkName: "passwordReset" */ '../views/resetPassword.vue'),
+    props: true,
+    meta: {
+      requiresGuest: true,
+    },
+  },
+  {
     path: '/register',
     name: 'register',
     component: () => import(/* webpackChunkName: "register" */ '../views/register.vue'),

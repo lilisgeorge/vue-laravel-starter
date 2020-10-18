@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="text-center px-4 py-2 border border-transparent rounded font-medium
+    class="inline-block text-center px-4 py-2 border border-transparent rounded font-medium
     sm:text-sm sm:leading-5
     focus:outline-none"
     :class="[

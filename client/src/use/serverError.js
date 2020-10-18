@@ -4,13 +4,21 @@ export default function useServerError(error) {
   const hasServerError = () => hasOwnProperty(error, 'response');
 
   const isValidationError = () => hasServerError
-      && hasOwnProperty(error.response, 'status')
-      && error.response.status === 422;
+    && hasOwnProperty(error.response, 'status')
+    && error.response.status === 422;
+
+  const isThrottleError = () => hasServerError
+    && hasOwnProperty(error.response, 'status')
+    && error.response.status === 429;
+
+  const hasErrorMessage = () => hasServerError
+    && hasOwnProperty(error.response, 'data')
+    && hasOwnProperty(error.response.data, 'message');
 
   const hasErrors = () => hasServerError
-      && hasOwnProperty(error.response, 'data')
-      && hasOwnProperty(error.response.data, 'errors')
-      && Object.keys(error.response.data.errors).length > 0;
+    && hasOwnProperty(error.response, 'data')
+    && hasOwnProperty(error.response.data, 'errors')
+    && Object.keys(error.response.data.errors).length > 0;
 
   const hasError = (key) => {
     if (!hasErrors) {
@@ -18,6 +26,14 @@ export default function useServerError(error) {
     }
 
     return hasOwnProperty(error.response.data.errors, key);
+  };
+
+  const getErrorMessage = () => {
+    if (!hasErrorMessage) {
+      return '';
+    }
+
+    return error.response.data.message;
   };
 
   const getErrors = () => {
@@ -41,8 +57,11 @@ export default function useServerError(error) {
   return {
     hasServerError,
     isValidationError,
+    isThrottleError,
+    hasErrorMessage,
     hasErrors,
     hasError,
+    getErrorMessage,
     getErrors,
     getFirstErrors,
   };
