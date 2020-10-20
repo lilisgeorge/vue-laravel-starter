@@ -4,11 +4,17 @@ import { store } from '@/store';
 const routes = [
   {
     path: '/',
-    name: 'index',
     component: () => import(/* webpackChunkName: "index" */ '../views/index.vue'),
     meta: {
       requiresAuth: true,
     },
+    children: [
+      {
+        path: '',
+        name: 'index',
+        component: () => import(/* webpackChunkName: "index.home" */ '../views/index/home.vue'),
+      },
+    ],
   },
   {
     path: '/login',

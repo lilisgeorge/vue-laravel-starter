@@ -15,13 +15,7 @@
     </div>
     <div class="content">
       <div class="p-10 h-full">
-        <div
-          class="w-full h-full border-2 border-dashed rounded-lg flex items-center justify-center"
-        >
-          <UiHeading :level="3">
-            Dashboard View
-          </UiHeading>
-        </div>
+        <RouterView />
       </div>
     </div>
   </div>
