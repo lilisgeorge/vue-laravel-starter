@@ -9,6 +9,7 @@
     <div
       v-if="state.open"
       ref="dropdown"
+      @click="toggle"
     >
       <slot />
     </div>
