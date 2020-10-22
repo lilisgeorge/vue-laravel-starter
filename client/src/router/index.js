@@ -4,7 +4,7 @@ import { store } from '@/store';
 const routes = [
   {
     path: '/',
-    component: () => import(/* webpackChunkName: "index" */ '../views/index.vue'),
+    component: () => import(/* webpackChunkName: "home" */ '../layouts/BaseLayout.vue'),
     meta: {
       requiresAuth: true,
     },
@@ -12,7 +12,7 @@ const routes = [
       {
         path: '',
         name: 'index',
-        component: () => import(/* webpackChunkName: "index.home" */ '../views/index/home.vue'),
+        component: () => import(/* webpackChunkName: "home" */ '../views/home.vue'),
       },
     ],
   },
@@ -52,7 +52,7 @@ const routes = [
   {
     path: '/email/verify',
     name: 'email.verification.notice',
-    component: () => import(/* webpackChunkName: "emailVerificationNotice" */ '../views/emailVerificationNotice.vue'),
+    component: () => import(/* webpackChunkName: "emailVerification" */ '../views/emailVerificationNotice.vue'),
     meta: {
       requiresAuth: true,
     },
@@ -60,7 +60,7 @@ const routes = [
   {
     path: '/email/verify/:id/:hash',
     name: 'email.verification.verify',
-    component: () => import(/* webpackChunkName: "emailVerificationVerify" */ '../views/emailVerificationVerify.vue'),
+    component: () => import(/* webpackChunkName: "emailVerification" */ '../views/emailVerificationVerify.vue'),
     meta: {
       requiresAuth: true,
     },
@@ -98,7 +98,7 @@ router.beforeEach(async (to, from, next) => {
   } else if (to.matched.some((record) => record.meta.requiresGuest)) {
     if (store.state.user) {
       next({
-        name: 'index',
+        name: 'home',
       });
     } else {
       next();

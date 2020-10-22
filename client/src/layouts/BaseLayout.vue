@@ -26,13 +26,10 @@ import GlobalNavigation from '@/components/GlobalNavigation.vue';
 import Navigation from '@/components/Navigation.vue';
 
 export default {
-  name: 'IndexView',
+  name: 'BaseLayout',
   components: {
     GlobalNavigation,
     Navigation,
-  },
-  setup() {
-    //
   },
 };
 </script>
