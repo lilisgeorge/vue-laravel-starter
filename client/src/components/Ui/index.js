@@ -10,3 +10,4 @@ export * from './UiNavLink';
 export * from './UiAvatar';
 export * from './UiDropdown';
 export * from './UiMessage';
+export * from './UiContainer';

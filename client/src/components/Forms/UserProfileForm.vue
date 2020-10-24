@@ -32,7 +32,7 @@
                     type="text"
                     :disabled="isPending"
                     v-bind="field"
-                    class="w-1/3"
+                    class="w-full md:w-1/2 lg:w-1/3"
                   />
                 </div>
                 <UiMessage
@@ -59,7 +59,7 @@
                     type="email"
                     :disabled="isPending"
                     v-bind="field"
-                    class="w-1/3"
+                    class="w-full md:w-1/2 lg:w-1/3"
                   />
                 </div>
                 <UiMessage

@@ -1,9 +1,12 @@
 <template>
-  <div class="layout">
-    <div class="navigation">
-      <div class="navigation-inner">
+  <div class="flex flex-row min-h-screen flex-auto bg-gray-200">
+    <div
+      class="block fixed top-0 bottom-0 left-0
+      transform -translate-x-full lg:translate-x-0 transition-transform duration-150 ease-in-out"
+    >
+      <div class="flex flex-row h-full">
         <GlobalNavigation />
-        <div class="contextual-navigation">
+        <div class="w-64 bg-cool-gray-800 text-white">
           <div class="p-4">
             <div class="w-full text-xl font-semibold leading-10">
               Vue-laravel-starter
@@ -13,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="content">
+    <div class="flex-auto transition-all duration-150 ease-in-out lg:ml-16 lg:pl-64">
       <div>
         <RouterView />
       </div>
@@ -33,43 +36,3 @@ export default {
   },
 };
 </script>
-
-<style lang="postcss">
-.layout {
-  @apply flex flex-row h-screen flex-auto;
-}
-
-.navigation {
-  @apply block fixed top-0 bottom-0 left-0 transform -translate-x-full;
-  @apply transition-transform duration-150 ease-in-out;
-}
-
-@screen lg {
-  .navigation {
-    @apply translate-x-0;
-  }
-}
-
-.navigation-inner {
-  @apply flex flex-row h-full;
-}
-
-.global-navigation {
-  @apply w-16 bg-amber-600;
-}
-
-.contextual-navigation {
-  @apply w-64 bg-cool-gray-800 text-white;
-}
-
-.content {
-  @apply flex-auto bg-gray-200;
-  @apply transition-all duration-150 ease-in-out;
-}
-
-@screen lg {
-  .content {
-    @apply ml-16 pl-64;
-  }
-}
-</style>
