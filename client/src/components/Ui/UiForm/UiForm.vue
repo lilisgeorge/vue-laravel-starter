@@ -44,6 +44,10 @@ export default {
     const isRejected = computed(() => state.status === STATUS_REJECTED);
 
     async function handleSubmit(values) {
+      if (isPending.value || isRejected.value) {
+        return;
+      }
+
       try {
         state.status = STATUS_PENDING;
         await props.action(values);
