@@ -126,6 +126,15 @@ const store = createStore({
         return Promise.reject(error);
       }
     },
+    async updateUserPassword(ctx, { formData }) {
+      try {
+        await api.put('api/user/password', formData);
+
+        return Promise.resolve();
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    },
   },
   modules: {
   },

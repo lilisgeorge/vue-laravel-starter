@@ -19,6 +19,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
         return response()->json($request->user());
     });
 
-    Route::put('user/profile-information', [\App\Http\Controllers\UserProfileInformationController::class, 'update'])
-        ->name('user-profile-information.update');
+    Route::put('user/profile-information', [\App\Http\Controllers\UserProfileInformationController::class, 'update']);
+    Route::put('user/password', [\App\Http\Controllers\UserPasswordController::class, 'update']);
 });
