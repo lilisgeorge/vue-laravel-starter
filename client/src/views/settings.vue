@@ -9,15 +9,18 @@
       </UiHeading>
     </div>
     <div class="px-4 py-4 sm:px-6 sm:py-12 lg:px-10">
-      <div class="border-2 rounded border-dashed h-64 flex items-center justify-center">
-        Content ...
-      </div>
+      <UserProfileForm />
     </div>
   </div>
 </template>
 
 <script>
+import UserProfileForm from '@/components/Forms/UserProfileForm.vue';
+
 export default {
   name: 'SettingsView',
+  components: {
+    UserProfileForm,
+  },
 };
 </script>

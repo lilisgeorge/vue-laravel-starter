@@ -112,6 +112,20 @@ const store = createStore({
         return Promise.reject(error);
       }
     },
+    async updateUserProfileInformation(ctx, { formData }) {
+      try {
+        const response = await api.put('user/profile-information', formData);
+
+        ctx.commit({
+          type: 'setUser',
+          user: response.data,
+        });
+
+        return Promise.resolve();
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    },
   },
   modules: {
   },

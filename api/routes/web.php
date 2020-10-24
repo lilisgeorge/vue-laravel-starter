@@ -40,6 +40,10 @@ Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])
     ->middleware('auth:sanctum')
     ->name('logout');
 
+Route::put('user/profile-information', [\App\Http\Controllers\UserProfileInformationController::class, 'update'])
+    ->middleware('auth:sanctum')
+    ->name('user-profile-information.update');
+
 Route::get('/{any?}', [\App\Http\Controllers\SpaController::class, 'index'])
     ->where('any', '^(?!api).*$')
     ->name('home');
