@@ -4,7 +4,7 @@
       :level="2"
       class="text-center mb-12"
     >
-      Login
+      Vue-Laravel Starter
     </UiHeading>
     <div class="max-w-lg w-full mx-auto">
       <LoginForm @success="handleSuccess" />

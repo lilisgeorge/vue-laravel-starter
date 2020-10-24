@@ -4,7 +4,7 @@
       :level="2"
       class="text-center mb-12"
     >
-      Register
+      Create Account
     </UiHeading>
     <div class="max-w-lg w-full mx-auto">
       <RegisterForm @success="handleSuccess" />
