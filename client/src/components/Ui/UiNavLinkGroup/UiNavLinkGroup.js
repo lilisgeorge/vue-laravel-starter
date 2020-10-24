@@ -19,7 +19,7 @@ const UiNavLinkGroup = (props, context) => h(
           'h2',
           {
             class: [
-              'text-xs', 'uppercase', 'font-medium', 'flex-1', 'text-gray-600',
+              'text-xs', 'uppercase', 'font-medium', 'flex-1', 'text-cool-gray-400',
               'cursor-default', 'leading-4',
             ],
           },

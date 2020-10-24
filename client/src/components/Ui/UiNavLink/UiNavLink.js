@@ -11,12 +11,11 @@ const UiNavLink = (props, context) => h(
       'flex', 'flex-row', 'space-x-2', 'items-center',
       'outline-none',
       props.active ? [
-        'bg-blue-600',
+        'bg-cool-gray-700',
         'text-white',
       ] : [
-        'text-gray-800',
-        'hover:bg-gray-200',
-        'hover:text-gray-900',
+        'text-white',
+        'hover:bg-cool-gray-700',
       ],
     ],
   },

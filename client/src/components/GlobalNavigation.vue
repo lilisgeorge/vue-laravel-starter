@@ -1,5 +1,5 @@
 <template>
-  <div class="w-16 bg-blue-900">
+  <div class="w-16 bg-cool-gray-900">
     <div class="flex flex-col h-full py-6">
       <div class="px-3 text-white space-y-4">
         <UiAvatar
@@ -20,6 +20,15 @@
           <div class="rounded shadow-lg">
             <div class="rounded shadow-xs bg-white w-56 divide-y divide-gray-100">
               <ul class="py-1">
+                <li>
+                  <RouterLink
+                    to="/settings"
+                    class="block px-4 py-2 hover:bg-gray-200 text-sm leading-5"
+                  >
+                    Settings
+                  </RouterLink>
+                </li>
+                <li class="border-b border-gray-200 my-1" />
                 <li>
                   <RouterLink
                     to="/logout"

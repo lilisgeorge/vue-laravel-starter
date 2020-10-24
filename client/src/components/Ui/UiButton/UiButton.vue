@@ -6,8 +6,8 @@
     focus:outline-none"
     :class="[
       text
-        ? 'text-blue-600 hover:bg-blue-50 focus:bg-blue-50'
-        : 'bg-blue-600 text-white focus:bg-blue-500 focus:shadow-outline-blue'
+        ? 'text-amber-600 hover:bg-amber-50 focus:bg-amber-50'
+        : 'bg-amber-600 text-white focus:bg-amber-500 focus:shadow-outline-amber'
     ]"
     v-bind="$attrs"
     @click="onClick"

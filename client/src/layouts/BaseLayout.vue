@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="content">
-      <div class="p-10 h-full">
+      <div>
         <RouterView />
       </div>
     </div>
@@ -55,15 +55,15 @@ export default {
 }
 
 .global-navigation {
-  @apply w-16 bg-blue-900;
+  @apply w-16 bg-amber-600;
 }
 
 .contextual-navigation {
-  @apply w-64 bg-gray-100;
+  @apply w-64 bg-cool-gray-800 text-white;
 }
 
 .content {
-  @apply flex-auto;
+  @apply flex-auto bg-gray-200;
   @apply transition-all duration-150 ease-in-out;
 }
 

@@ -5,7 +5,7 @@
       px-4 py-4 sm:px-6 sm:py-12 lg:px-10 text-white"
     >
       <UiHeading :level="2">
-        Home
+        Settings
       </UiHeading>
     </div>
     <div class="px-4 py-4 sm:px-6 sm:py-12 lg:px-10">
@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'SettingsView',
 };
 </script>

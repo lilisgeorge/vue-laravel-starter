@@ -1,6 +1,8 @@
 <template>
   <UiNav>
-    <UiNavLinkGroup caption="Default">
+    <UiNavLinkGroup
+      caption="Default"
+    >
       <RouterLink
         v-slot="{ href, navigate, isExactActive }"
         to="/"

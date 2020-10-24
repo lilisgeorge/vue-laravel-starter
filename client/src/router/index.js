@@ -14,6 +14,11 @@ const routes = [
         name: 'index',
         component: () => import(/* webpackChunkName: "home" */ '../views/home.vue'),
       },
+      {
+        path: 'settings',
+        name: 'settings',
+        component: () => import(/* webpackChunkName: "settings" */ '../views/settings.vue'),
+      },
     ],
   },
   {

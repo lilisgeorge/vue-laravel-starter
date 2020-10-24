@@ -1,105 +1,107 @@
 <template>
   <UiCard>
-    <UiForm
-      v-slot="{ isPending }"
-      :schema="formSchema"
-      :action="attemptLogin"
-    >
-      <div class="px-12 py-10 space-y-12">
-        <div class="space-y-6">
-          <div class="space-y-2">
-            <Field
-              v-slot="{ field, errorMessage }"
-              name="email"
-            >
-              <UiLabel
-                for="email"
+    <UiCardBody>
+      <UiForm
+        v-slot="{ isPending }"
+        :schema="formSchema"
+        :action="attemptLogin"
+      >
+        <div class="space-y-12">
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <Field
+                v-slot="{ field, errorMessage }"
+                name="email"
               >
-                Email address
-              </UiLabel>
-              <div class="flex">
-                <UiInput
-                  id="email"
-                  type="email"
-                  :disabled="isPending"
-                  v-bind="field"
-                  class="flex-auto"
-                />
-              </div>
-              <UiMessage
-                v-if="errorMessage"
-                error
+                <UiLabel
+                  for="email"
+                >
+                  Email address
+                </UiLabel>
+                <div class="flex">
+                  <UiInput
+                    id="email"
+                    type="email"
+                    :disabled="isPending"
+                    v-bind="field"
+                    class="flex-auto"
+                  />
+                </div>
+                <UiMessage
+                  v-if="errorMessage"
+                  error
+                >
+                  {{ errorMessage }}
+                </UiMessage>
+              </Field>
+            </div>
+            <div class="space-y-2">
+              <Field
+                v-slot="{ field, errorMessage }"
+                name="password"
               >
-                {{ errorMessage }}
-              </UiMessage>
-            </Field>
+                <UiLabel
+                  for="password"
+                >
+                  Password
+                </UiLabel>
+                <div class="flex">
+                  <UiInput
+                    id="password"
+                    type="password"
+                    :disabled="isPending"
+                    v-bind="field"
+                    class="flex-auto"
+                  />
+                </div>
+                <UiMessage
+                  v-if="errorMessage"
+                  error
+                >
+                  {{ errorMessage }}
+                </UiMessage>
+              </Field>
+            </div>
           </div>
-          <div class="space-y-2">
-            <Field
-              v-slot="{ field, errorMessage }"
-              name="password"
-            >
-              <UiLabel
-                for="password"
-              >
-                Password
-              </UiLabel>
-              <div class="flex">
-                <UiInput
-                  id="password"
-                  type="password"
-                  :disabled="isPending"
-                  v-bind="field"
-                  class="flex-auto"
-                />
-              </div>
-              <UiMessage
-                v-if="errorMessage"
-                error
-              >
-                {{ errorMessage }}
-              </UiMessage>
-            </Field>
-          </div>
-        </div>
-        <div class="flex flex-col space-y-2">
-          <UiButton
-            :disabled="isPending"
-            class="w-full"
-          >
-            Submit
-          </UiButton>
-          <RouterLink
-            v-slot="{ href, navigate }"
-            :to="{
-              name: 'password.request',
-            }"
-            custom
-          >
+          <div class="flex flex-col space-y-2">
             <UiButton
-              tag="a"
-              text
-              :href="href"
+              :disabled="isPending"
               class="w-full"
-              @click="navigate"
             >
-              Forgot Password
+              Submit
             </UiButton>
-          </RouterLink>
+            <RouterLink
+              v-slot="{ href, navigate }"
+              :to="{
+                name: 'password.request',
+              }"
+              custom
+            >
+              <UiButton
+                tag="a"
+                text
+                :href="href"
+                class="w-full"
+                @click="navigate"
+              >
+                Forgot Password
+              </UiButton>
+            </RouterLink>
+          </div>
         </div>
-      </div>
-    </UiForm>
-    <div class="p-8 bg-gray-50">
+      </UiForm>
+    </UiCardBody>
+    <UiCardFooter gray>
       <p class="text-center text-gray-700">
         Not a member? <router-link
           to="/register"
-          class="inline-block text-blue-600 border-b border-dotted border-transparent
-        focus:text-blue-500 focus:outline-none focus:border-blue-500"
+          class="inline-block text-amber-600 border-b border-dotted border-transparent
+        focus:text-amber-500 focus:outline-none focus:border-amber-500"
         >
           Register
         </router-link>
       </p>
-    </div>
+    </UiCardFooter>
   </UiCard>
 </template>
 

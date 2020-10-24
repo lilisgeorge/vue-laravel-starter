@@ -1,115 +1,117 @@
 <template>
   <UiCard>
-    <UiForm
-      v-slot="{ isPending }"
-      :schema="formSchema"
-      :action="attemptRegister"
-    >
-      <div class="px-12 py-10 space-y-12">
-        <div class="space-y-6">
-          <div class="space-y-2">
-            <Field
-              v-slot="{ field, errorMessage }"
-              name="name"
-            >
-              <UiLabel
-                for="name"
+    <UiCardBody>
+      <UiForm
+        v-slot="{ isPending }"
+        :schema="formSchema"
+        :action="attemptRegister"
+      >
+        <div class="space-y-12">
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <Field
+                v-slot="{ field, errorMessage }"
+                name="name"
               >
-                Name
-              </UiLabel>
-              <div class="flex">
-                <UiInput
-                  id="name"
-                  type="text"
-                  :disabled="isPending"
-                  v-bind="field"
-                  class="flex-auto"
-                />
-              </div>
-              <UiMessage
-                v-if="errorMessage"
-                error
+                <UiLabel
+                  for="name"
+                >
+                  Name
+                </UiLabel>
+                <div class="flex">
+                  <UiInput
+                    id="name"
+                    type="text"
+                    :disabled="isPending"
+                    v-bind="field"
+                    class="flex-auto"
+                  />
+                </div>
+                <UiMessage
+                  v-if="errorMessage"
+                  error
+                >
+                  {{ errorMessage }}
+                </UiMessage>
+              </Field>
+            </div>
+            <div class="space-y-2">
+              <Field
+                v-slot="{ field, errorMessage }"
+                name="email"
               >
-                {{ errorMessage }}
-              </UiMessage>
-            </Field>
+                <UiLabel
+                  for="email"
+                >
+                  Email address
+                </UiLabel>
+                <div class="flex">
+                  <UiInput
+                    id="email"
+                    type="email"
+                    :disabled="isPending"
+                    v-bind="field"
+                    class="flex-auto"
+                  />
+                </div>
+                <UiMessage
+                  v-if="errorMessage"
+                  error
+                >
+                  {{ errorMessage }}
+                </UiMessage>
+              </Field>
+            </div>
+            <div class="space-y-2">
+              <Field
+                v-slot="{ field, errorMessage }"
+                name="password"
+              >
+                <UiLabel
+                  for="password"
+                >
+                  Password
+                </UiLabel>
+                <div class="flex">
+                  <UiInput
+                    id="password"
+                    type="password"
+                    :disabled="isPending"
+                    v-bind="field"
+                    class="flex-auto"
+                  />
+                </div>
+                <UiMessage
+                  v-if="errorMessage"
+                  error
+                >
+                  {{ errorMessage }}
+                </UiMessage>
+              </Field>
+            </div>
           </div>
-          <div class="space-y-2">
-            <Field
-              v-slot="{ field, errorMessage }"
-              name="email"
+          <div>
+            <UiButton
+              :disabled="isPending"
+              class="w-full"
             >
-              <UiLabel
-                for="email"
-              >
-                Email address
-              </UiLabel>
-              <div class="flex">
-                <UiInput
-                  id="email"
-                  type="email"
-                  :disabled="isPending"
-                  v-bind="field"
-                  class="flex-auto"
-                />
-              </div>
-              <UiMessage
-                v-if="errorMessage"
-                error
-              >
-                {{ errorMessage }}
-              </UiMessage>
-            </Field>
-          </div>
-          <div class="space-y-2">
-            <Field
-              v-slot="{ field, errorMessage }"
-              name="password"
-            >
-              <UiLabel
-                for="password"
-              >
-                Password
-              </UiLabel>
-              <div class="flex">
-                <UiInput
-                  id="password"
-                  type="password"
-                  :disabled="isPending"
-                  v-bind="field"
-                  class="flex-auto"
-                />
-              </div>
-              <UiMessage
-                v-if="errorMessage"
-                error
-              >
-                {{ errorMessage }}
-              </UiMessage>
-            </Field>
+              Submit
+            </UiButton>
           </div>
         </div>
-        <div>
-          <UiButton
-            :disabled="isPending"
-            class="w-full"
-          >
-            Submit
-          </UiButton>
-        </div>
-      </div>
-    </UiForm>
-    <div class="p-8 bg-gray-50">
+      </UiForm>
+    </UiCardBody>
+    <UiCardFooter gray>
       <p class="text-center text-gray-700">
         Already a member? <router-link
           to="/login"
-          class="inline-block text-blue-600 border-b border-dotted border-transparent
-        focus:text-blue-500 focus:outline-none focus:border-blue-500"
+          class="inline-block text-amber-600 border-b border-dotted border-transparent
+        focus:text-amber-500 focus:outline-none focus:border-amber-500"
         >
           Login
         </router-link>
       </p>
-    </div>
+    </UiCardFooter>
   </UiCard>
 </template>
 

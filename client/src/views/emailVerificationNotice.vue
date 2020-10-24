@@ -1,5 +1,5 @@
 <template>
-  <div class="p-12 bg-gray-100 min-h-screen">
+  <div class="p-12 bg-gray-200 min-h-screen">
     <UiCard class="w-full max-w-lg mx-auto">
       <div class="px-12 py-10">
         <ui-heading

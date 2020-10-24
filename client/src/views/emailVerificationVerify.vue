@@ -1,5 +1,5 @@
 <template>
-  <div class="p-12 bg-gray-100 min-h-screen">
+  <div class="p-12 bg-gray-200 min-h-screen">
     Email Verification Verify View
   </div>
 </template>

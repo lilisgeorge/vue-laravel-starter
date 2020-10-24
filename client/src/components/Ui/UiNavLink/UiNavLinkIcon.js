@@ -7,9 +7,9 @@ const UiNavLinkIcon = (props, context) => h(
     class: [
       'inline-flex', 'w-6', 'h-6',
       props.active ? [
-        'text-blue-200',
+        'text-cool-gray-200',
       ] : [
-        'text-gray-600',
+        'text-cool-gray-400',
       ],
     ],
   },
