@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('user', function (Request $request) {
-    return response()->json($request->user());
-})->middleware(['auth:sanctum']);
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('user', function (Request $request) {
+        return response()->json($request->user());
+    });
+
+    Route::put('user/profile-information', [\App\Http\Controllers\UserProfileInformationController::class, 'update'])
+        ->name('user-profile-information.update');
+});

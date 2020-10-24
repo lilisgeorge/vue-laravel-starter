@@ -114,7 +114,7 @@ const store = createStore({
     },
     async updateUserProfileInformation(ctx, { formData }) {
       try {
-        const response = await api.put('user/profile-information', formData);
+        const response = await api.put('api/user/profile-information', formData);
 
         ctx.commit({
           type: 'setUser',
