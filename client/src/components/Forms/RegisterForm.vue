@@ -105,8 +105,8 @@
       <p class="text-center text-gray-700">
         Already a member? <router-link
           to="/login"
-          class="inline-block text-amber-600 border-b border-dotted border-transparent
-        focus:text-amber-500 focus:outline-none focus:border-amber-500"
+          class="inline-block text-black border-b border-dotted border-transparent
+        focus:text-black focus:outline-none focus:border-black font-medium"
         >
           Login
         </router-link>
