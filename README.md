@@ -8,6 +8,8 @@ Vue-laravel-starter is a basic boilerplate for building vue single-page applicat
   - Email Verification
   - Password reset
 - Profile Management
+  - Update Profile Information
+  - Change Password
 
 ## Installation
 
