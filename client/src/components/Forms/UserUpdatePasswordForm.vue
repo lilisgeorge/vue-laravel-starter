@@ -102,7 +102,7 @@
       </UiCardBody>
       <UiCardFooter gray>
         <UiButton
-          :disabled="isPending"
+          :busy="isPending"
         >
           Save
         </UiButton>

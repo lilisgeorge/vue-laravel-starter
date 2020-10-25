@@ -92,7 +92,7 @@
           </div>
           <div>
             <UiButton
-              :disabled="isPending"
+              :busy="isPending"
               class="w-full"
             >
               Submit

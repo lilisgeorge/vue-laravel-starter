@@ -48,7 +48,7 @@
         </div>
         <div>
           <UiButton
-            :disabled="isPending"
+            :busy="isPending"
           >
             Send email
           </UiButton>

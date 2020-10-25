@@ -65,10 +65,10 @@
           </div>
           <div class="flex flex-col space-y-2">
             <UiButton
-              :disabled="isPending"
+              :busy="isPending"
               class="w-full"
             >
-              Submit
+              Login
             </UiButton>
             <RouterLink
               v-slot="{ href, navigate }"
