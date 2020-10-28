@@ -4,18 +4,26 @@ import { store } from '@/store';
 const routes = [
   {
     path: '/',
-    component: () => import(/* webpackChunkName: "home" */ '../layouts/BaseLayout.vue'),
+    name: 'index',
+    component: () => import(/* webpackChunkName: "index" */ '../views/welcome.vue'),
+    meta: {
+      requiresGuest: true,
+    },
+  },
+  {
+    path: '/dashboard',
+    component: () => import(/* webpackChunkName: "dashboard" */ '../views/dashboard.vue'),
     meta: {
       requiresAuth: true,
     },
     children: [
       {
         path: '',
-        name: 'index',
-        component: () => import(/* webpackChunkName: "home" */ '../views/home.vue'),
+        name: 'dashboard',
+        component: () => import(/* webpackChunkName: "dashboard" */ '../views/home.vue'),
       },
       {
-        path: 'settings',
+        path: '/settings',
         name: 'settings',
         component: () => import(/* webpackChunkName: "settings" */ '../views/settings.vue'),
       },
@@ -103,7 +111,7 @@ router.beforeEach(async (to, from, next) => {
   } else if (to.matched.some((record) => record.meta.requiresGuest)) {
     if (store.state.user) {
       next({
-        name: 'home',
+        name: 'dashboard',
       });
     } else {
       next();

@@ -95,7 +95,7 @@
               :busy="isPending"
               class="w-full"
             >
-              Submit
+              Register
             </UiButton>
           </div>
         </div>

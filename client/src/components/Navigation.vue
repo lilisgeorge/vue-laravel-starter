@@ -5,7 +5,7 @@
     >
       <RouterLink
         v-slot="{ href, navigate, isExactActive }"
-        to="/"
+        :to="{ name: 'dashboard' }"
         custom
       >
         <UiNavLink

@@ -34,7 +34,7 @@ export default {
           signature,
         });
 
-        router.replace({ name: 'index' });
+        router.replace({ name: 'dashboard' });
       } catch (error) {
         //
       }

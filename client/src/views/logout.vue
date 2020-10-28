@@ -26,7 +26,7 @@ export default {
           user: null,
         });
 
-        router.replace({ name: 'login' });
+        router.replace({ name: 'index' });
       } catch (error) {
         //
       }

@@ -17,9 +17,7 @@
       </div>
     </div>
     <div class="flex-auto transition-all duration-150 ease-in-out lg:ml-16 lg:pl-64">
-      <div>
-        <RouterView />
-      </div>
+      <slot />
     </div>
   </div>
 </template>
@@ -29,7 +27,7 @@ import GlobalNavigation from '@/components/GlobalNavigation.vue';
 import Navigation from '@/components/Navigation.vue';
 
 export default {
-  name: 'BaseLayout',
+  name: 'DashboardLayout',
   components: {
     GlobalNavigation,
     Navigation,

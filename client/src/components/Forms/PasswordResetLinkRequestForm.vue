@@ -50,7 +50,7 @@
           <UiButton
             :busy="isPending"
           >
-            Send email
+            Send instructions
           </UiButton>
         </div>
       </div>

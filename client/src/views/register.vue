@@ -1,24 +1,27 @@
 <template>
-  <div class="p-12 bg-gray-200 min-h-screen">
-    <UiHeading
-      :level="2"
-      class="text-center mb-12"
-    >
-      Create Account
-    </UiHeading>
-    <div class="max-w-lg w-full mx-auto">
-      <RegisterForm @success="handleSuccess" />
-    </div>
-  </div>
+  <Layout>
+    <UiContainer>
+      <UiHeading
+        :level="2"
+        class="text-center mb-12"
+      >
+        Create Account
+      </UiHeading>
+      <div class="max-w-lg w-full mx-auto">
+        <RegisterForm @success="handleSuccess" />
+      </div>
+    </UiContainer>
+  </Layout>
 </template>
 
 <script>
 import { useRouter } from 'vue-router';
+import Layout from '@/layouts/ViewLayout.vue';
 import RegisterForm from '@/components/Forms/RegisterForm.vue';
 
 export default {
   name: 'RegisterView',
-  components: { RegisterForm },
+  components: { Layout, RegisterForm },
   setup() {
     const router = useRouter();
 
