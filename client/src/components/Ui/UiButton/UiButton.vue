@@ -1,10 +1,11 @@
 <template>
   <component
     :is="tag"
-    class="inline-block text-center px-4 py-2 border border-transparent rounded font-medium
-    sm:text-sm sm:leading-5
+    class="inline-block border border-transparent rounded
+    text-center font-medium uppercase sm:text-sm sm:leading-5
     focus:outline-none"
     :class="[
+      compact ? 'px-4 py-2' : 'px-8 py-4 min-w-32',
       text
         ? 'text-black hover:bg-amber-50 focus:bg-amber-50'
         : 'bg-amber-600 text-black focus:bg-amber-500 focus:shadow-outline-amber'
@@ -47,6 +48,7 @@ export default {
       type: String,
       default: 'button',
     },
+    compact: Boolean,
     busy: Boolean,
   },
   emits: ['click'],

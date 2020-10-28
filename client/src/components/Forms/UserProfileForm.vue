@@ -78,7 +78,7 @@
           :disabled="isPending"
           :busy="isPending"
         >
-          Save
+          Update profile information
         </UiButton>
       </UiCardFooter>
     </UiForm>

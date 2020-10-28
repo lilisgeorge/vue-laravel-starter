@@ -2,7 +2,7 @@
   <UiCard>
     <UiCardHeader>
       <UiHeading :level="4">
-        Update Password
+        Password
       </UiHeading>
       <p class="text-gray-600 mt-2">
         Ensure your account is using a long, random password to stay secure.
@@ -104,7 +104,7 @@
         <UiButton
           :busy="isPending"
         >
-          Save
+          Update password
         </UiButton>
       </UiCardFooter>
     </UiForm>
